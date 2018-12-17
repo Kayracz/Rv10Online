@@ -1,0 +1,9 @@
+<%= simple_form_for @product do |f| %>
+<%= f.input :name %>
+<%= f.input :size %>
+<%= f.input :color %>
+<%= f.input :price %>
+<%= f.input :category %>
+<%= f.button :submit %>
+<%= link_to "Back to all Products", products_path %>
+<% end %>

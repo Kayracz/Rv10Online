@@ -1,0 +1,16 @@
+<h1> Product page </h1>
+
+<% @products.each do |product| %>
+<h2><%= link_to product.name, product_path(product) %></h2>
+<p><%= product.size %></p>
+<p><%= product.color %></p>
+<p><%= product.price %></p>
+<p><%= product.category %></p>
+
+<%= link_to "More details", product_path(product) %>
+
+
+<!-- If I am the owner, display the link -->
+<!-- Otherwise, dont -->
+<% end %>
+

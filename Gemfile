@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 ruby '2.4.4'
 
 gem 'devise'
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '~> 1.3'
+
 
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
@@ -30,3 +33,4 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 end
+
