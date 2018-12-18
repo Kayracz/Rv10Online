@@ -1,16 +1,31 @@
 <h1> Product page </h1>
 
-<% @products.each do |product| %>
-<p><%= cl_image_tag product.photo, height: 300, width: 400, crop: :fill %></p>
-<h2><%= link_to product.name, product_path(product) %></h2>
-<p><%= product.size %></p>
-<p><%= product.color %></p>
-<p><%= product.price %></p>
-<p><%= product.category %></p>
-<%= link_to "More details", product_path(product) %>
+
+<div class="container">
+  <div class="row">
+
+       <div class="col-sm-12 col-md-10 col-lg-6">
+      <!-- insert <div class="card"> -->
+
+        <div class="card-img-top">
+          <% @products.each do |product| %>
+          <p><%= cl_image_tag product.photo, height: 219, width: 273, crop: :fill %></p>
+
+          <div class="card-description">
+            <h2><%= link_to product.name, product_path(product) %></h2>
+            <p><%= product.price %></p>
+   <!--  <p><%= product.size %></p>
+    <p><%= product.color %></p> -->
+    <!--  <p><%= product.category %></p> -->
+     <span class="fa fa-heart"></span>
+  </div>
+
+  <%= link_to "More details", product_path(product) %>
 
 
-<!-- If I am the owner, display the link -->
-<!-- Otherwise, dont -->
-<% end %>
+  <a class="card-link" href="#" ></a>
+  <% end %>
+</div>
+</div>
+</div>
 
