@@ -1,10 +1,11 @@
 <h1> Show one Product </h1>
 
-
+<p><%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %></p>
 <h1><%= @product.name %></h1>
 <p><%= @product.size %></p>
 <p><%= @product.color %></p>
 <p><%= @product.price %></p>
 <p><%= @product.category %></p>
+
 
 <%= link_to "Back to all Products", products_path %>

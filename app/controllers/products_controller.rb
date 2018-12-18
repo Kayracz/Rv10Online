@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
  skip_before_action :authenticate_user!, only: [:index]
- before_action :set_product, only: [:show, :edit, :update, :destroy]
+ before_action :set_product, only: [:show, :edit, :create, :update, :destroy]
  def index
   @products = Product.all
 end
@@ -35,8 +35,9 @@ def destroy
 end
 
 private
+
 def product_params
-  params.require(:product).permit(:name, :price, :size, :color, :category)
+  params.require(:product).permit(:name, :price, :size, :color, :category, :photo)
 end
 
 def set_product

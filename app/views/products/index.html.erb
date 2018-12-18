@@ -1,12 +1,12 @@
 <h1> Product page </h1>
 
 <% @products.each do |product| %>
+<p><%= cl_image_tag product.photo, height: 300, width: 400, crop: :fill %></p>
 <h2><%= link_to product.name, product_path(product) %></h2>
 <p><%= product.size %></p>
 <p><%= product.color %></p>
 <p><%= product.price %></p>
 <p><%= product.category %></p>
-
 <%= link_to "More details", product_path(product) %>
 
 

@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 ruby '2.4.4'
 
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.9.1'
+
+gem 'carrierwave', '~> 1.2'
+gem 'figaro'
 
 gem 'devise'
 gem 'remotipart', github: 'mshibuya/remotipart'
