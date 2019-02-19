@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
  skip_before_action :authenticate_user!, only: [:index]
  before_action :set_product, only: [:show, :edit, :create, :update, :destroy]
  def index
-  @products = Product.all
+@products = Product.all
+ @products = Product.search(params[:search])
 end
 
 def show

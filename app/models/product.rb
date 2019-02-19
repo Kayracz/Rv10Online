@@ -7,5 +7,12 @@ class Product < ApplicationRecord
   validates :category, presence: true
   validates :price, presence: true
   # belongs_to :admin
-end
 
+  def self.search(search)
+    if search
+      where(["name LIKE ?","%#{[search]}%"])
+    else
+    all
+   end
+  end
+end

@@ -9,4 +9,7 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def favoritos
+  end
 end

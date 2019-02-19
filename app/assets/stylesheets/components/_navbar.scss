@@ -1,3 +1,45 @@
+.nav-link-active {
+  color: white;
+  background-color: #BB0000;
+  border-color: #dee2e6 #dee2e6 #fff;
+  font-size:15px;
+}
+
+.nav-link{
+  color: #BB0000;
+  font-size:15px;
+}
+
+.category-tabs{
+  margin-bottom: 25px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #BB0000;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    font-size:14px;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+  }
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: white;
+  color:#BB0000;
+}
+}
+
 /* Main navbar */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -75,3 +117,5 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+

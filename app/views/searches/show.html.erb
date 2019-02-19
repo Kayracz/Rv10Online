@@ -1,0 +1,24 @@
+<div class="container page-wrapper">
+
+    <h1>Search Results</h1>
+
+  <p><%= link_to 'Atras',products_path %></p>
+
+  <% if @search.search_products.empty? %>
+  <p>Not found</p>
+
+  <% else %>
+
+    <div class="row">
+      <% @search.search_products.each do |product| %>
+    <br>
+
+<div class="productsearch">
+<h1><%= product.name %> </h1>
+<p>Price: $<%= product.price %></p>
+<p>Category: %<= product.category %></p>
+<p>isbn: <%= product.isbn %></p>
+</div>
+
+<%end%>
+<%end%>

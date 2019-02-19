@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_17_232340) do
+ActiveRecord::Schema.define(version: 2019_02_15_202112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "product_id"
+    t.boolean "status"
+    t.string "delivery_type"
+    t.string "address"
+    t.integer "quantity_id"
+    t.integer "totalprice"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -24,6 +36,18 @@ ActiveRecord::Schema.define(version: 2018_12_17_232340) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
+    t.integer "quantity"
+    t.integer "Itemqte"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "keywords"
+    t.string "category"
+    t.decimal "min_price"
+    t.decimal "max_price"
+    t.integer "isbn"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -35,6 +59,8 @@ ActiveRecord::Schema.define(version: 2018_12_17_232340) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false, null: false
+    t.string "Photo"
+    t.string "Name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
