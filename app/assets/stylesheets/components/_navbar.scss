@@ -35,8 +35,9 @@
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: white;
-  color:#BB0000;
+  opacity: 0.5;
+  // background-color: white;
+  // color:#BB0000;
 }
 }
 
